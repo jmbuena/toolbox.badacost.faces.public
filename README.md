@@ -1,15 +1,17 @@
-# toolbox.badacost.faces
+# Multi-view face detection trained on AFLW dataset.
 
-This repo has the auxiliary Matlab and C++ code in order to replicate the experiments we made for face detection in our paper:
+This repo has the auxiliary Matlab and C++ code in order to replicate the face detection experiments in our paper.
+If you use this code for your own research, you must reference our journal paper:
   
-     BAdaCost: Multi-class Boosting with Costs
-     Antonio Fernández-Baldera, José M. Buenaposada, and Luis Baumela
-
+   **BAdaCost: Multi-class Boosting with Costs.**
+   Antonio Fernández-Baldera, José M. Buenaposada, and Luis Baumela.
+   Pattern Recognition, Elsevier. In press, 2018.
+   [DOI:10.1016/j.patcog.2018.02.022](https://doi.org/10.1016/j.patcog.2018.02.022)
 
 ## Requirements
 
-* Clone BAdaCost detection Matlab toolbox repository: badacost.toolbox.public. 
-* Clone toolbox.badacost.faces, a set of tools and code to perform the faces detection experiments with the AFLW, AFW, PASCAL faces and FDDB datasets.
+* Clone [toolbox.badacost.public](https://github.com/jmbuena/toolbox.badacost.public) repo, with our modified version of Piotr Dollar toolbox with the BAdaCost algorithm with cost-sensitive trees. Go to its directory and execute Matlab. Then  from Matlab prompt, execute addpath(createpath(PATH_TO_TOOLBOX)) and then toolboxCompile. 
+* Clone toolbox.badacost.faces.public, a set of tools and code to perform the faces detection experiments with the AFLW, AFW, PASCAL faces and FDDB datasets.
 
 * We train our detector with face images from the Annotated Facial Landmarks in the Wild dataset. Thus, from the [AFLW site](https://lrs.icg.tugraz.at/research/aflw/) you have to download:
   * aflw-images-0.tar.gz, 
