@@ -7,6 +7,10 @@ This repo has the auxiliary Matlab and C++ code in order to replicate the face d
    Antonio Fernández-Baldera, José M. Buenaposada, and Luis Baumela.
    Pattern Recognition, Elsevier. In press, 2018.
    [DOI:10.1016/j.patcog.2018.02.022](https://doi.org/10.1016/j.patcog.2018.02.022)
+   
+   
+   
+   [![Youtube Video](https://img.youtube.com/vi/r6aNMm4ruFI/0.jpg)](https://www.youtube.com/watch?v=r6aNMm4ruFI&feature=youtu.be)
 
 ## Requirements
 
