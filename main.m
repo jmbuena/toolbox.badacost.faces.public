@@ -82,12 +82,12 @@ if PREPARE_DATA
 end
 
 % -----------------------------------------------------------------------------
+useSAMME = 0;
 dataDir = PREPARED_DATA_PATH; 
 D = 6;
 T = 1024;
 N = 10000;
 NA = 40000;
-useSAMME = 0;
 costsAlpha = 1;
 costsBeta = 1.5;
 costsGamma = 1;
@@ -106,11 +106,18 @@ end
 % 4) Now we use the trained car detector in the images given in a directory:
  
 % The already trained detector file:
-TRAINED_DETECTOR_FILE = fullfile(OUTPUT_DATA_PATH, ...
+if useSAMME
+  TRAINED_DETECTOR_FILE = fullfile(OUTPUT_DATA_PATH, ...
+                                  sprintf('SAMME_D_%d_T_%d_N_%d_NA_%d', D, T, N, NA), ...
+                                  'AFLW_SHRINKAGE_0.100000_RESAMPLING_1.000000_ASPECT_RATIO_1.000000_Detector.mat');
+
+else
+  TRAINED_DETECTOR_FILE = fullfile(OUTPUT_DATA_PATH, ...
                                   sprintf('BADACOST_%d_%d_%d_D_%d_T_%d_N_%d_NA_%d', costsAlpha, costsBeta, costsGamma, D, T, N, NA), ...
                                   'AFLW_SHRINKAGE_0.100000_RESAMPLING_1.000000_ASPECT_RATIO_1.000000_Detector.mat');
+end                              
  
-%% The already trained detector file:
+% %% The already trained SubCat detector file:
 % TRAINED_DETECTOR_FILE = fullfile(OUTPUT_DATA_PATH, ...
 %                                   'SUBCAT_D_2_T_4096_N_5000_NA_20000', ...
 %                                   'SUBCAT_D_2_Detector.mat');
